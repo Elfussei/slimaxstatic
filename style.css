@@ -1,0 +1,149 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos iniciais */
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(255, 221, 181, 0.5), rgba(255, 221, 181, 0.5)), url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+/* Estilo para a imagem fogo */
+.fogo {
+    position: absolute;
+    top: 98px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+/* Estilo para a imagem estrela */
+.estrela {
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px; /* Ajuste o tamanho da estrela conforme necessário */
+    height: auto;
+    z-index: 1; /* Fica atrás do círculo de fogo e da imagem slimax */
+}
+
+/* Estilo para a imagem titulo */
+.titulo {
+    position: absolute;
+    top: 5px; /* Distância ajustada do topo */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+/* Estilo para a imagem slimax */
+.slimax {
+    position: absolute;
+    top: 230px; /* Posiciona abaixo da imagem título */
+    left: 0; /* Alinhado à esquerda */
+    width: 60px; /* Define um tamanho menor para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5)); /* Adiciona sombra */
+    z-index: 3;
+}
+
+/* Estilo para a imagem de labaredas */
+.labaredas {
+    position: absolute;
+    bottom: 0; /* Posiciona na parte inferior da tela */
+    left: 0;
+    width: 100%; /* Faz com que a div ocupe toda a largura da tela */
+    height: 400px; /* Ajuste a altura conforme necessário */
+    background-image: url('img/labaredas.png'); /* Substitua pelo caminho correto da sua imagem de labaredas */
+    background-size: cover; /* Faz com que a imagem cubra toda a largura da div */
+    background-position: center bottom; /* Ajusta a posição da imagem dentro da div */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    z-index: -1; /* Coloca as labaredas atrás dos outros elementos */
+}
+
+/* Estilo para a imagem do modelo H */
+.modeloh {
+    position: absolute;
+    bottom: 0px; /* Ajuste a altura conforme necessário */
+    left: 10px; /* Posiciona no canto inferior esquerdo */
+    width: 190px; /* Ajuste o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 6; /* Ajusta o z-index para garantir que fique na frente dos outros elementos */
+}
+
+/* Estilo para a imagem do modelo M */
+.modelom {
+    position: absolute;
+    bottom: 0px; /* Ajuste a altura conforme necessário */
+    right: 10px; /* Posiciona no canto inferior direito */
+    width: 170px; /* Ajuste o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 6; /* Ajusta o z-index para garantir que fique na frente dos outros elementos */
+}
+
+/* Estilo para as marcas dentro da estrela */
+.marcas {
+    position: absolute;
+    top: 250px; /* Ajuste para alinhar as marcas dentro da estrela */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre as marcas */
+    z-index: 2; /* Certifica-se de que fique acima da estrela */
+}
+
+.somatex {
+    position: absolute;
+    top: 20px;
+    left: 130px;
+    width: 140px;
+    height: auto;
+}
+
+.norditropin {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    width: 150px;
+    height: auto;
+}
+
+.kingpharma {
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    width: 130px;
+    height: auto;
+}
+
+.mounjaro {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 150px;
+    height: auto;
+}
+
+.ozempic {
+    position: absolute;
+    top: 210px;
+    left: 140px;
+    width: 130px;
+    height: auto;
+}
+
+/* Movimentação das marcas */
+/* Para ajustar horizontalmente, altere 'left' ou 'right' nos seletores das marcas individuais */
+/* Para ajustar verticalmente, altere 'top' nos seletores das marcas individuais */
