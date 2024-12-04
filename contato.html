@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Contato</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Título do Formulário -->
+    <h1 class="form-title">Solicitação de Contato</h1>
+
+    <!-- Formulário de Contato -->
+    <form class="contact-form" id="contactForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+        <!-- Botão Enviar -->
+        <button type="submit" class="btn-enviar">Enviar</button>
+
+        <!-- Botão Voltar -->
+        <button type="button" onclick="history.back()" class="btn-voltar">Voltar</button>
+    </form>
+
+    <!-- Script JavaScript -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Impede o envio padrão do formulário
+
+            // Captura os valores dos campos do formulário
+            const nome = document.getElementById("nome").value.trim();
+            const telefone = document.getElementById("telefone").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            if (!nome || !telefone || !email) {
+                alert("Por favor, preencha todos os campos corretamente.");
+                return;
+            }
+
+            // Mensagem a ser enviada
+            const mensagem = `Olá, meu nome é ${nome}. Meu telefone é ${telefone} e meu e-mail é ${email}. Gostaria de saber mais informações.`;
+            const mensagemCodificada = encodeURIComponent(mensagem);
+
+            // Número do WhatsApp configurado
+            const numeroWhatsApp = "5548999368496";
+
+            // Redireciona para o WhatsApp com a mensagem
+            alert("Redirecionando para o WhatsApp...");
+            window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`, "_blank");
+        });
+    </script>
+</body>
+
+</html>
